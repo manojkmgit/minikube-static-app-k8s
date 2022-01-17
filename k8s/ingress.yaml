@@ -3,12 +3,9 @@ kind: Ingress
 metadata:
   name: days-app-ingress
   namespace: sample
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-    - host: minikube-example.com
-      http:
+    - http:
         paths:
           - path: /
             pathType: Prefix  
